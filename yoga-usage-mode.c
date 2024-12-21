@@ -129,7 +129,7 @@ static int setup_input_dev(void)
     return 0;
 }
 
-static void wmi_notify(u32 value, void *context)
+static void wmi_notify(union acpi_object *value, void *context)
 {
     pr_debug("Yoga Mode Change event received\n");
     get_and_report_usage_mode();
